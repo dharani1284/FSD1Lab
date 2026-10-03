@@ -7,27 +7,34 @@
         body {
             height: 1500px;
             margin: 0;
+        }
 
-            /* Background image */
+        /* Background image */
+        body::before {
+            content: "";
+            position: fixed;
+
+            width: 100%;
+            height: 300px;
+
+            top: 50%;
+            left: 0;
+
             background-image: url("image.jpg");
-
-            /* Place image halfway down the page */
-            background-position: center 50%;
-
-            /* Do not repeat image */
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
 
-            /* Image remains fixed when scrolling */
-            background-attachment: fixed;
-
-            /* Tilt the background image horizontally */
+            /* Tilt horizontally */
             transform: skewX(-10deg);
+
+            /* Remains fixed while scrolling */
+            z-index: -1;
         }
 
         h1 {
             text-align: center;
-            margin-top: 700px;
-            transform: skewX(10deg);
+            padding-top: 700px;
         }
     </style>
 </head>
