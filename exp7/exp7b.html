@@ -5,19 +5,37 @@
 </head>
 <body>
 
-    <h2>Window Object Example</h2>
-    <button onclick="showInfo()">Click Me</button>
+    <h2>Window Object</h2>
 
-    <p id="output"></p>
+    <button onclick="showAlert()">Alert</button>
+    <button onclick="getName()">Prompt</button>
+    <button onclick="check()">Confirm</button>
+
+    <p id="result"></p>
 
     <script>
-        function showInfo() {
-            let width = window.innerWidth;
-            let height = window.innerHeight;
+        // Properties
+        document.getElementById("result").innerHTML =
+            "Window Width: " + window.innerWidth +
+            "<br>Window Height: " + window.innerHeight;
 
-            document.getElementById("output").innerHTML =
-                "Window Width: " + width +
-                "<br>Window Height: " + height;
+        // Method: alert()
+        function showAlert() {
+            window.alert("Welcome to JavaScript!");
+        }
+
+        // Method: prompt()
+        function getName() {
+            let name = window.prompt("Enter your name:");
+            document.getElementById("result").innerHTML =
+                "Hello " + name;
+        }
+
+        // Method: confirm()
+        function check() {
+            let answer = window.confirm("Are you sure?");
+            document.getElementById("result").innerHTML =
+                "Your answer: " + answer;
         }
     </script>
 
