@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Object</title>
+</head>
+<body>
+
+    <h2>String Object</h2>
+    <p id="result"></p>
+
+    <script>
+        let text = "JavaScript Programming";
+
+        document.getElementById("result").innerHTML =
+            "Original: " + text +
+            "<br>Uppercase: " + text.toUpperCase() +
+            "<br>Lowercase: " + text.toLowerCase() +
+            "<br>Character at 0: " + text.charAt(0) +
+            "<br>Position of Script: " + text.indexOf("Script") +
+            "<br>Contains JavaScript: " + text.includes("JavaScript") +
+            "<br>Substring: " + text.substring(0, 10) +
+            "<br>Replace: " + text.replace("JavaScript", "Web");
+    </script>
+
+</body>
+</html>
