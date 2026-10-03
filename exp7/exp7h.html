@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Object</title>
+</head>
+<body>
+
+    <h2>User Defined Object</h2>
+    <p id="result"></p>
+
+    <script>
+        // Constructor
+        function Student(name, age) {
+            this.name = name;
+            this.age = age;
+
+            // Method
+            this.display = function() {
+                return "Name: " + this.name +
+                       "<br>Age: " + this.age;
+            };
+        }
+
+        // Create object using constructor
+        let student = new Student("Rahul", 20);
+
+        // Accessor
+        Object.defineProperty(student, "info", {
+
+            // Getter
+            get: function() {
+                return this.name + " - " + this.age;
+            },
+
+            // Setter
+            set: function(value) {
+                let data = value.split(",");
+                this.name = data[0];
+                this.age = Number(data[1]);
+            }
+        });
+
+        // Display using method
+        document.getElementById("result").innerHTML =
+            student.display() +
+            "<br>Student Info: " + student.info;
+
+        // Using setter
+        student.info = "Arun,21";
+
+        // Display updated values
+        document.getElementById("result").innerHTML +=
+            "<br><br>After using Setter:" +
+            "<br>" + student.display();
+    </script>
+
+</body>
+</html>
