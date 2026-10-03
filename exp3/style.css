@@ -1,0 +1,11 @@
+/* External CSS */
+
+h2 {
+    color: red;
+    text-align: center;
+}
+
+body {
+    font-family: Arial;
+    background-color: lightblue;
+}

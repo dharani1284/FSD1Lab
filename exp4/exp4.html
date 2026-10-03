@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selectors</title>
+
+    <style>
+
+        /* 1. Simple Selectors */
+
+        /* Element selector */
+        p {
+            color: blue;
+        }
+
+        /* ID selector */
+        #heading {
+            color: red;
+        }
+
+        /* Class selector */
+        .box {
+            background-color: lightyellow;
+        }
+
+        /* Group selector */
+        h2, h3 {
+            color: green;
+        }
+
+        /* Universal selector */
+        * {
+            font-family: Arial;
+        }
+
+
+        /* 2. Combinator Selectors */
+
+        /* Descendant */
+        div p {
+            background-color: lightblue;
+        }
+
+        /* Child */
+        div > span {
+            color: purple;
+        }
+
+        /* Adjacent sibling */
+        h3 + p {
+            color: orange;
+        }
+
+        /* General sibling */
+        h3 ~ p {
+            font-size: 18px;
+        }
+
+
+        /* 3. Pseudo-class */
+
+        a:hover {
+            color: red;
+        }
+
+
+        /* 4. Pseudo-element */
+
+        p::first-letter {
+            font-size: 25px;
+        }
+
+
+        /* 5. Attribute selector */
+
+        input[type="text"] {
+            background-color: lightgreen;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading">CSS Selectors</h1>
+
+    <h2>Simple Selectors</h2>
+
+    <div class="box">
+        <p>Hello World</p>
+        <span>This is a span.</span>
+    </div>
+
+    <h3>Combinators</h3>
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+
+    <h3>Pseudo Class</h3>
+    <a href="#">Move mouse over this link</a>
+
+    <h3>Attribute Selector</h3>
+    <input type="text" placeholder="Enter name">
+
+</body>
+</html>
