@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object</title>
+</head>
+<body>
+
+    <h2>Array Object</h2>
+    <p id="result"></p>
+
+    <script>
+        let fruits = ["Mango", "Apple", "Banana"];
+
+        // push() - adds element at the end
+        fruits.push("Orange");
+
+        // unshift() - adds element at the beginning
+        fruits.unshift("Grapes");
+
+        // sort() - sorts the array
+        fruits.sort();
+
+        // reverse() - reverses the array
+        fruits.reverse();
+
+        // join() - converts array into a string
+        let output = fruits.join(", ");
+
+        document.getElementById("result").innerHTML =
+            "Fruits: " + output +
+            "<br>Number of fruits: " + fruits.length;
+    </script>
+
+</body>
+</html>
