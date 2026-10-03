@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Object</title>
+</head>
+<body>
+
+    <h2>RegExp Object</h2>
+    <p id="result"></p>
+
+    <script>
+        let pattern = /JavaScript/i;
+        let text = "I am learning JavaScript.";
+
+        // test() checks whether the pattern exists
+        let testResult = pattern.test(text);
+
+        // exec() returns the matched value
+        let execResult = pattern.exec(text);
+
+        document.getElementById("result").innerHTML =
+            "Pattern: " + pattern.source +
+            "<br>Flags: " + pattern.flags +
+            "<br>test(): " + testResult +
+            "<br>exec(): " + execResult[0];
+    </script>
+
+</body>
+</html>
