@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Object</title>
+</head>
+<body>
+
+    <h2>Date Object</h2>
+    <p id="result"></p>
+
+    <script>
+        let today = new Date();
+
+        document.getElementById("result").innerHTML =
+            "Date: " + today.getDate() +
+            "<br>Month: " + (today.getMonth() + 1) +
+            "<br>Year: " + today.getFullYear() +
+            "<br>Day: " + today.getDay() +
+            "<br>Hours: " + today.getHours() +
+            "<br>Minutes: " + today.getMinutes() +
+            "<br>Seconds: " + today.getSeconds();
+    </script>
+
+</body>
+</html>
